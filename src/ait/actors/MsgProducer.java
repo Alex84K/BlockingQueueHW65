@@ -21,6 +21,7 @@ public class MsgProducer extends Thread{
                 Thread.sleep(sendIntervalMillis);
             } catch (InterruptedException e) {
                 // noop
+                e.printStackTrace();
             }
             String message = "message#" + i;
             blkQueue.push(message);
